@@ -59,14 +59,14 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 91);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 89);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(957, 291);
+            this.dataGridView1.Size = new System.Drawing.Size(957, 370);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnLapTheKhoHangHoa
             // 
-            this.btnLapTheKhoHangHoa.Location = new System.Drawing.Point(647, 390);
+            this.btnLapTheKhoHangHoa.Location = new System.Drawing.Point(658, 465);
             this.btnLapTheKhoHangHoa.Name = "btnLapTheKhoHangHoa";
             this.btnLapTheKhoHangHoa.Size = new System.Drawing.Size(154, 34);
             this.btnLapTheKhoHangHoa.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             // btnBaoCaoNhapXuatTon
             // 
-            this.btnBaoCaoNhapXuatTon.Location = new System.Drawing.Point(818, 390);
+            this.btnBaoCaoNhapXuatTon.Location = new System.Drawing.Point(818, 465);
             this.btnBaoCaoNhapXuatTon.Name = "btnBaoCaoNhapXuatTon";
             this.btnBaoCaoNhapXuatTon.Size = new System.Drawing.Size(154, 34);
             this.btnBaoCaoNhapXuatTon.TabIndex = 2;
@@ -84,6 +84,7 @@
             // 
             // cbChonThang
             // 
+            this.cbChonThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChonThang.FormattingEnabled = true;
             this.cbChonThang.Location = new System.Drawing.Point(103, 49);
             this.cbChonThang.Name = "cbChonThang";
@@ -112,6 +113,7 @@
             // 
             // cbKho
             // 
+            this.cbKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKho.FormattingEnabled = true;
             this.cbKho.Location = new System.Drawing.Point(340, 49);
             this.cbKho.Name = "cbKho";
@@ -130,6 +132,7 @@
             // 
             // cbHangHoa
             // 
+            this.cbHangHoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHangHoa.FormattingEnabled = true;
             this.cbHangHoa.Location = new System.Drawing.Point(632, 49);
             this.cbHangHoa.Name = "cbHangHoa";
@@ -138,7 +141,7 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(766, 36);
+            this.btnTimKiem.Location = new System.Drawing.Point(818, 36);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(98, 34);
             this.btnTimKiem.TabIndex = 2;
@@ -149,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 436);
+            this.ClientSize = new System.Drawing.Size(984, 511);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -163,6 +166,7 @@
             this.Controls.Add(this.title);
             this.Name = "FormBaoCaoNhapTon";
             this.Text = "FormBaoCaoNhapTon";
+            this.Load += new System.EventHandler(this.FormBaoCaoNhapTon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

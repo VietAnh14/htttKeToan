@@ -41,7 +41,7 @@
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(0, 24);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(984, 437);
+            this.panelContainer.Size = new System.Drawing.Size(984, 537);
             this.panelContainer.TabIndex = 0;
             // 
             // menu
@@ -76,12 +76,13 @@
             this.tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem.Name = "tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem";
             this.tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem.Size = new System.Drawing.Size(156, 20);
             this.tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem.Text = "Tạo phiếu xuất điều chỉnh";
+            this.tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem.Click += new System.EventHandler(this.tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 461);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.menu);
             this.MainMenuStrip = this.menu;

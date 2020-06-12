@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HTTTKeToan.utils;
 
 namespace HTTTKeToan.view
 {
@@ -21,5 +22,13 @@ namespace HTTTKeToan.view
         {
             return new FormTaoPhieuNhapDieuChinh();
         }
+
+        private void FormTaoPhieuNhapDieuChinh_Load(object sender, EventArgs e)
+        {
+            ViewUtils.setDefaulCbText(cbKhoNhap, "-Chọn kho nhập-");
+            ViewUtils.setDefaulCbText(cbNhaCungCap, "-Chọn nhà cung cấp-");
+            ViewUtils.setDefaulCbText(cbNgayNhap, "-Chọn ngày nhập-");
+        }
+
     }
 }

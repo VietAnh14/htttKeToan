@@ -38,6 +38,7 @@ namespace HTTTKeToan
         {
             if (form.GetType() != currentForm.GetType()) {
                 currentForm.Close();
+                panelContainer.Controls.Clear();
                 currentForm = form;
                 form.TopLevel = false;
                 panelContainer.Controls.Add(form);
@@ -50,6 +51,11 @@ namespace HTTTKeToan
         private void tạoPhiếuNhậpĐiềuChỉnhToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadFormInPanel(FormTaoPhieuNhapDieuChinh.newInstance());
+        }
+
+        private void tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadFormInPanel(FormPhieuXuatDieuChinh.newInstance());
         }
     }
 }
