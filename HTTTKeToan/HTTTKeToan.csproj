@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GocPhieu.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +75,12 @@
     <Compile Include="view\FormTaoPhieuNhapDieuChinh.Designer.cs">
       <DependentUpon>FormTaoPhieuNhapDieuChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\FormThemSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FormThemSanPham.Designer.cs">
+      <DependentUpon>FormThemSanPham.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\FormTaoPhieuNhapDieuChinh.resx">
       <DependentUpon>FormTaoPhieuNhapDieuChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FormThemSanPham.resx">
+      <DependentUpon>FormThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -11,8 +11,7 @@ namespace HTTTKeToan.utils
     public class DbUtils
     {
         private static DbUtils instance;
-
-        string connectionSTR = "Data Source=DESKTOP-20ON1NC;Initial Catalog=testdb;User ID=sa;Password=datchim147";
+        string connectionSTR = "Data Source=DESKTOP-20ON1NC;Initial Catalog=HTTTKT;User ID=sa;Password=datchim147";
         // Khởi tạo tính đóng gói : Ctrl + R + E
         public static DbUtils Instance
         {
