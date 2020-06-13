@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using HTTTKeToan.utils;
 
@@ -17,6 +12,7 @@ namespace HTTTKeToan.view
 
         private List<DanhMucHangHoa> listHangHoa = new List<DanhMucHangHoa>();
         private const string MSCH = "CH1";
+        private string pso = null;
 
         public FormPhieuXuatDieuChinh()
         {
@@ -43,7 +39,15 @@ namespace HTTTKeToan.view
         {
             const String QUERY_LOAD_DATA = "SELECT * FROM DANHMUC_HANGHOA";
             var dt = DbUtils.Instance.ExecuteQuery(QUERY_LOAD_DATA);
-            foreach(DataRow row in dt.Rows)
+            dataGridView1.Columns[0].ValueType = typeof(string);
+            dataGridView1.Columns[1].ValueType = typeof(string);
+            dataGridView1.Columns[2].ValueType = typeof(string);
+            dataGridView1.Columns[3].ValueType = typeof(int);
+            dataGridView1.Columns[4].ValueType = typeof(float);
+            dataGridView1.Columns[5].ValueType = typeof(float);
+            dataGridView1.Columns[6].ValueType = typeof(float);
+
+            foreach (DataRow row in dt.Rows)
             {
                 var item = new DanhMucHangHoa();
                 item.maHangHoa = (int) row[0];
@@ -120,8 +124,7 @@ namespace HTTTKeToan.view
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string pso = DateTime.Now.ToString();
-            if (!insertGocPhieu(pso))
+            if (!insertGocPhieu())
             {
                 MessageBox.Show("Insert goc phieu failed", "Error");
                 return;
@@ -159,7 +162,7 @@ namespace HTTTKeToan.view
             MessageBox.Show("Insert success", "Info");
         }
 
-        private bool insertGocPhieu(string psoStr)
+        private bool insertGocPhieu()
         {
             GocPhieu gocPhieu = new GocPhieu();
             gocPhieu.msKh = cbChonKhachHang.Text;
@@ -172,8 +175,8 @@ namespace HTTTKeToan.view
             gocPhieu.nttoan = pickerNgThanhToan.Value.ToString();
             gocPhieu.quyenHD = tbQuyenHD.Text;
             gocPhieu.lyDo = tbLyDo.Text;
-
-            return gocPhieu.insert(psoStr);
+            pso = gocPhieu.getPSO();
+            return gocPhieu.insert();
         }
     }
 }

@@ -27,8 +27,6 @@ namespace HTTTKeToan.view
         {
             ViewUtils.setDefaulCbText(cbKhoNhap, "-Chọn kho nhập-");
             ViewUtils.setDefaulCbText(cbNhaCungCap, "-Chọn nhà cung cấp-");
-            ViewUtils.setDefaulCbText(cbNgayNhap, "-Chọn ngày nhập-");
         }
-
     }
 }

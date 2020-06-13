@@ -31,7 +31,6 @@
             this.title = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnLapTheKhoHangHoa = new System.Windows.Forms.Button();
-            this.btnBaoCaoNhapXuatTon = new System.Windows.Forms.Button();
             this.cbChonThang = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbHangHoa = new System.Windows.Forms.ComboBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnBaoCaoNhapXuatTon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,15 +72,6 @@
             this.btnLapTheKhoHangHoa.TabIndex = 2;
             this.btnLapTheKhoHangHoa.Text = "Lập thẻ kho hàng hóa";
             this.btnLapTheKhoHangHoa.UseVisualStyleBackColor = true;
-            // 
-            // btnBaoCaoNhapXuatTon
-            // 
-            this.btnBaoCaoNhapXuatTon.Location = new System.Drawing.Point(818, 465);
-            this.btnBaoCaoNhapXuatTon.Name = "btnBaoCaoNhapXuatTon";
-            this.btnBaoCaoNhapXuatTon.Size = new System.Drawing.Size(154, 34);
-            this.btnBaoCaoNhapXuatTon.TabIndex = 2;
-            this.btnBaoCaoNhapXuatTon.Text = "Tính báo cáo nhập xuất tồn";
-            this.btnBaoCaoNhapXuatTon.UseVisualStyleBackColor = true;
             // 
             // cbChonThang
             // 
@@ -148,6 +139,15 @@
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
             // 
+            // btnBaoCaoNhapXuatTon
+            // 
+            this.btnBaoCaoNhapXuatTon.Location = new System.Drawing.Point(818, 465);
+            this.btnBaoCaoNhapXuatTon.Name = "btnBaoCaoNhapXuatTon";
+            this.btnBaoCaoNhapXuatTon.Size = new System.Drawing.Size(154, 34);
+            this.btnBaoCaoNhapXuatTon.TabIndex = 2;
+            this.btnBaoCaoNhapXuatTon.Text = "Tính hoạch toán giá vốn";
+            this.btnBaoCaoNhapXuatTon.UseVisualStyleBackColor = true;
+            // 
             // FormBaoCaoNhapTon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,7 +178,6 @@
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnLapTheKhoHangHoa;
-        private System.Windows.Forms.Button btnBaoCaoNhapXuatTon;
         private System.Windows.Forms.ComboBox cbChonThang;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -186,5 +185,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbHangHoa;
         private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btnBaoCaoNhapXuatTon;
     }
 }

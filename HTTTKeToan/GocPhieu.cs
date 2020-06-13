@@ -25,11 +25,11 @@ namespace HTTTKeToan
         public string ctGoc { get; set; }
         public string namThang { get; set; }
 
-        public string toInsertString(string psoStr)
+        public string toInsertString()
         {
             int id = getNextId();
             string query = "INSERT INTO GOC_PHIEU (PSO, LOAICT, MSCH, NLAP, MSKH, SOHD, LOAIHD, NTTOAN, NGPHHD, QUYEN_HD, LYDO) ";
-            query += "VALUES('" + psoStr + "','" + loaiCT.ToString();
+            query += "VALUES('" + pso + "','" + loaiCT.ToString();
             query += "','"+ msCH +"','"+ ngayLap +"','"+msKh+"','"+soHD+"','"+loaiHD+"','"+nttoan+"','"+ngPHHD+"',"+quyenHD+",'"+lyDo+"')";
             return query;
         }
@@ -37,15 +37,22 @@ namespace HTTTKeToan
         public int getNextId()
         {
             var maxId = DbUtils.Instance.ExecuteScalar("SELECT MAX(GOC_PHIEU.ID) FROM GOC_PHIEU");
-            return maxId == null ? 0 : (int)maxId;
+            return maxId == null ? 0 : (int)maxId + 1;
         }
 
-        public bool insert(string psoStr)
+        public string getPSO()
         {
+            string year = DateTime.Now.Year.ToString();
+            return year + loaiCT + msCH + getNextId().ToString();
+        }
+
+        public bool insert()
+        {
+            pso = getPSO();
             try
             {
-                string insertString = toInsertString(psoStr);
-                var row = DbUtils.Instance.ExecuteNonQuery(toInsertString(psoStr));
+                string insertString = toInsertString();
+                var row = DbUtils.Instance.ExecuteNonQuery(insertString);
                 return row > 0;
             } catch(Exception e)
             {
