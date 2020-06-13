@@ -39,13 +39,6 @@ namespace HTTTKeToan.view
         {
             const String QUERY_LOAD_DATA = "SELECT * FROM DANHMUC_HANGHOA";
             var dt = DbUtils.Instance.ExecuteQuery(QUERY_LOAD_DATA);
-            dataGridView1.Columns[0].ValueType = typeof(string);
-            dataGridView1.Columns[1].ValueType = typeof(string);
-            dataGridView1.Columns[2].ValueType = typeof(string);
-            dataGridView1.Columns[3].ValueType = typeof(int);
-            dataGridView1.Columns[4].ValueType = typeof(float);
-            dataGridView1.Columns[5].ValueType = typeof(float);
-            dataGridView1.Columns[6].ValueType = typeof(float);
 
             foreach (DataRow row in dt.Rows)
             {
