@@ -31,14 +31,20 @@
             this.title = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnLapTheKhoHangHoa = new System.Windows.Forms.Button();
-            this.cbChonThang = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbKho = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbHangHoa = new System.Windows.Forms.ComboBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.btnBaoCaoNhapXuatTon = new System.Windows.Forms.Button();
+            this.btnTinhHoachToanGiaVon = new System.Windows.Forms.Button();
+            this.monthPicker = new System.Windows.Forms.DateTimePicker();
+            this.Thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MSCH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHangHoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLTonCuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,9 +62,18 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Thang,
+            this.MSCH,
+            this.TenHangHoa,
+            this.SLNhap,
+            this.SLXuat,
+            this.SLTonCuoi});
             this.dataGridView1.Location = new System.Drawing.Point(15, 89);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(957, 370);
@@ -72,15 +87,6 @@
             this.btnLapTheKhoHangHoa.TabIndex = 2;
             this.btnLapTheKhoHangHoa.Text = "Lập thẻ kho hàng hóa";
             this.btnLapTheKhoHangHoa.UseVisualStyleBackColor = true;
-            // 
-            // cbChonThang
-            // 
-            this.cbChonThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbChonThang.FormattingEnabled = true;
-            this.cbChonThang.Location = new System.Drawing.Point(103, 49);
-            this.cbChonThang.Name = "cbChonThang";
-            this.cbChonThang.Size = new System.Drawing.Size(100, 21);
-            this.cbChonThang.TabIndex = 3;
             // 
             // label1
             // 
@@ -106,6 +112,14 @@
             // 
             this.cbKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKho.FormattingEnabled = true;
+            this.cbKho.Items.AddRange(new object[] {
+            "Tất cả cửa hàng",
+            "KHO01",
+            "KHO02",
+            "KHO03",
+            "KHO04",
+            "KHO05",
+            "KHO06"});
             this.cbKho.Location = new System.Drawing.Point(340, 49);
             this.cbKho.Name = "cbKho";
             this.cbKho.Size = new System.Drawing.Size(128, 21);
@@ -138,28 +152,79 @@
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // btnBaoCaoNhapXuatTon
+            // btnTinhHoachToanGiaVon
             // 
-            this.btnBaoCaoNhapXuatTon.Location = new System.Drawing.Point(818, 465);
-            this.btnBaoCaoNhapXuatTon.Name = "btnBaoCaoNhapXuatTon";
-            this.btnBaoCaoNhapXuatTon.Size = new System.Drawing.Size(154, 34);
-            this.btnBaoCaoNhapXuatTon.TabIndex = 2;
-            this.btnBaoCaoNhapXuatTon.Text = "Tính hoạch toán giá vốn";
-            this.btnBaoCaoNhapXuatTon.UseVisualStyleBackColor = true;
+            this.btnTinhHoachToanGiaVon.Location = new System.Drawing.Point(818, 465);
+            this.btnTinhHoachToanGiaVon.Name = "btnTinhHoachToanGiaVon";
+            this.btnTinhHoachToanGiaVon.Size = new System.Drawing.Size(154, 34);
+            this.btnTinhHoachToanGiaVon.TabIndex = 2;
+            this.btnTinhHoachToanGiaVon.Text = "Tính hoạch toán giá vốn";
+            this.btnTinhHoachToanGiaVon.UseVisualStyleBackColor = true;
+            this.btnTinhHoachToanGiaVon.Click += new System.EventHandler(this.btnTinhHoachToanGiaVon_Click);
+            // 
+            // monthPicker
+            // 
+            this.monthPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.monthPicker.Location = new System.Drawing.Point(104, 53);
+            this.monthPicker.Name = "monthPicker";
+            this.monthPicker.Size = new System.Drawing.Size(110, 20);
+            this.monthPicker.TabIndex = 5;
+            // 
+            // Thang
+            // 
+            this.Thang.HeaderText = "Tháng";
+            this.Thang.Name = "Thang";
+            this.Thang.ReadOnly = true;
+            // 
+            // MSCH
+            // 
+            this.MSCH.HeaderText = "Mã số cửa hàng";
+            this.MSCH.Name = "MSCH";
+            this.MSCH.ReadOnly = true;
+            this.MSCH.Width = 150;
+            // 
+            // TenHangHoa
+            // 
+            this.TenHangHoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenHangHoa.HeaderText = "Tên hàng";
+            this.TenHangHoa.Name = "TenHangHoa";
+            this.TenHangHoa.ReadOnly = true;
+            // 
+            // SLNhap
+            // 
+            this.SLNhap.HeaderText = "Số lượng nhập";
+            this.SLNhap.Name = "SLNhap";
+            this.SLNhap.ReadOnly = true;
+            this.SLNhap.Width = 120;
+            // 
+            // SLXuat
+            // 
+            this.SLXuat.HeaderText = "Số lượng xuất";
+            this.SLXuat.Name = "SLXuat";
+            this.SLXuat.ReadOnly = true;
+            this.SLXuat.Width = 120;
+            // 
+            // SLTonCuoi
+            // 
+            this.SLTonCuoi.HeaderText = "Số lượng tồn cuối kỳ";
+            this.SLTonCuoi.Name = "SLTonCuoi";
+            this.SLTonCuoi.ReadOnly = true;
+            this.SLTonCuoi.Width = 150;
             // 
             // FormBaoCaoNhapTon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 511);
+            this.Controls.Add(this.monthPicker);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbHangHoa);
             this.Controls.Add(this.cbKho);
-            this.Controls.Add(this.cbChonThang);
-            this.Controls.Add(this.btnBaoCaoNhapXuatTon);
+            this.Controls.Add(this.btnTinhHoachToanGiaVon);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnLapTheKhoHangHoa);
             this.Controls.Add(this.dataGridView1);
@@ -178,13 +243,19 @@
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnLapTheKhoHangHoa;
-        private System.Windows.Forms.ComboBox cbChonThang;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbKho;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbHangHoa;
         private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.Button btnBaoCaoNhapXuatTon;
+        private System.Windows.Forms.Button btnTinhHoachToanGiaVon;
+        private System.Windows.Forms.DateTimePicker monthPicker;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Thang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MSCH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenHangHoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLXuat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLTonCuoi;
     }
 }

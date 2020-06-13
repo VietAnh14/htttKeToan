@@ -76,6 +76,8 @@ namespace HTTTKeToan.utils
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.CommandText = listPara[0];
                     int i = 0;
                     foreach (string item in listPara)
                     {
