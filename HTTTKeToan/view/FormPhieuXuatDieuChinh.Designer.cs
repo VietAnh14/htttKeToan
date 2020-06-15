@@ -40,13 +40,6 @@
             this.tbSoHD = new System.Windows.Forms.TextBox();
             this.tbLoaiHD = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaHangHoa = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.TenHangHoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThueXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TienThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.pickerNgayXuat = new System.Windows.Forms.DateTimePicker();
             this.pickerNgThanhToan = new System.Windows.Forms.DateTimePicker();
@@ -56,6 +49,13 @@
             this.tbQuyenHD = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbLyDo = new System.Windows.Forms.RichTextBox();
+            this.MaHangHoa = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.TenHangHoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThueXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TienThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,48 +194,6 @@
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridView1_CurrentCellDirtyStateChanged);
             // 
-            // MaHangHoa
-            // 
-            this.MaHangHoa.DataPropertyName = "MaHH";
-            this.MaHangHoa.HeaderText = "Mã hàng hóa";
-            this.MaHangHoa.Name = "MaHangHoa";
-            this.MaHangHoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaHangHoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // TenHangHoa
-            // 
-            this.TenHangHoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenHangHoa.DataPropertyName = "TENHANGHOA";
-            this.TenHangHoa.HeaderText = "Tên hàng hóa";
-            this.TenHangHoa.Name = "TenHangHoa";
-            // 
-            // DonViTinh
-            // 
-            this.DonViTinh.DataPropertyName = "DVT";
-            this.DonViTinh.HeaderText = "Đơn vị tính";
-            this.DonViTinh.Name = "DonViTinh";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // DonGia
-            // 
-            this.DonGia.HeaderText = "Đơn giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // ThueXuat
-            // 
-            this.ThueXuat.HeaderText = "Thuế xuất";
-            this.ThueXuat.Name = "ThueXuat";
-            // 
-            // TienThue
-            // 
-            this.TienThue.HeaderText = "Tiền thuế";
-            this.TienThue.Name = "TienThue";
-            this.TienThue.Width = 150;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(804, 466);
@@ -315,6 +273,48 @@
             this.tbLyDo.TabIndex = 8;
             this.tbLyDo.Text = "";
             // 
+            // MaHangHoa
+            // 
+            this.MaHangHoa.DataPropertyName = "MaHH";
+            this.MaHangHoa.HeaderText = "Mã hàng hóa";
+            this.MaHangHoa.Name = "MaHangHoa";
+            this.MaHangHoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaHangHoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // TenHangHoa
+            // 
+            this.TenHangHoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenHangHoa.DataPropertyName = "TENHANGHOA";
+            this.TenHangHoa.HeaderText = "Tên hàng hóa";
+            this.TenHangHoa.Name = "TenHangHoa";
+            // 
+            // DonViTinh
+            // 
+            this.DonViTinh.DataPropertyName = "DVT";
+            this.DonViTinh.HeaderText = "Đơn vị tính";
+            this.DonViTinh.Name = "DonViTinh";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // ThueXuat
+            // 
+            this.ThueXuat.HeaderText = "Thuế xuất (%)";
+            this.ThueXuat.Name = "ThueXuat";
+            // 
+            // TienThue
+            // 
+            this.TienThue.HeaderText = "Tiền thuế";
+            this.TienThue.Name = "TienThue";
+            this.TienThue.Width = 150;
+            // 
             // FormPhieuXuatDieuChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,13 +366,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker pickerNgayXuat;
-        private System.Windows.Forms.DataGridViewComboBoxColumn MaHangHoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenHangHoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonViTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThueXuat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TienThue;
         private System.Windows.Forms.DateTimePicker pickerNgThanhToan;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker pickerNgPHHD;
@@ -380,5 +373,12 @@
         private System.Windows.Forms.TextBox tbQuyenHD;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox tbLyDo;
+        private System.Windows.Forms.DataGridViewComboBoxColumn MaHangHoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenHangHoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonViTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThueXuat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TienThue;
     }
 }

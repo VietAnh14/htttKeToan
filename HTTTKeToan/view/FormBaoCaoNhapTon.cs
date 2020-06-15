@@ -92,7 +92,7 @@ namespace HTTTKeToan.view
             HangHoa hangHoa = (HangHoa)cbHangHoa.SelectedItem;
             if (hangHoa.maHH != -1)
             {
-                searchParameter.Add("DANHMUC_HANGHOA.MAHH", hangHoa.maHH.ToString());
+                searchParameter.Add("B.MAHH", hangHoa.maHH.ToString());
             }
             if (cbKho.SelectedIndex != 0)
             {
@@ -119,11 +119,18 @@ namespace HTTTKeToan.view
         private void btnTinhHoachToanGiaVon_Click(object sender, EventArgs e)
         {
             DataTable dt = dataGridView1.DataSource as DataTable;
+            try
+            {
                 foreach (DataRow row in dt.Rows)
                 {
                     object[] parameter = { row["THANG"], row["MSCH"], row["MAHH"] };
                     var result = DbUtils.Instance.ExecuteNonQuery("HACHTOANGIAVON @THANG @MSCH @MAHH", parameter);
                 }
+                MessageBox.Show(this, "Hoạch toán giá vốn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } catch(Exception error)
+            {
+                MessageBox.Show(this, error.StackTrace, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }

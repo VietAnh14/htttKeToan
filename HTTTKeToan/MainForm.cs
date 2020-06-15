@@ -57,5 +57,10 @@ namespace HTTTKeToan
         {
             loadFormInPanel(FormPhieuXuatDieuChinh.newInstance());
         }
+
+        private void quảnLýPhiếuXuấtBánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadFormInPanel(Form1.getInstance());
+        }
     }
 }

@@ -33,6 +33,7 @@
             this.báoCáoNhậpXuấtTồnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tạoPhiếuNhậpĐiềuChỉnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýPhiếuXuấtBánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.báoCáoNhậpXuấtTồnToolStripMenuItem,
             this.tạoPhiếuNhậpĐiềuChỉnhToolStripMenuItem,
-            this.tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem});
+            this.tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem,
+            this.quảnLýPhiếuXuấtBánToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(984, 24);
@@ -78,6 +80,13 @@
             this.tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem.Text = "Tạo phiếu xuất điều chỉnh";
             this.tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem.Click += new System.EventHandler(this.tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem_Click);
             // 
+            // quảnLýPhiếuXuấtBánToolStripMenuItem
+            // 
+            this.quảnLýPhiếuXuấtBánToolStripMenuItem.Name = "quảnLýPhiếuXuấtBánToolStripMenuItem";
+            this.quảnLýPhiếuXuấtBánToolStripMenuItem.Size = new System.Drawing.Size(141, 20);
+            this.quảnLýPhiếuXuấtBánToolStripMenuItem.Text = "Quản lý phiếu xuất bán";
+            this.quảnLýPhiếuXuấtBánToolStripMenuItem.Click += new System.EventHandler(this.quảnLýPhiếuXuấtBánToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,6 +112,7 @@
         private System.Windows.Forms.ToolStripMenuItem báoCáoNhậpXuấtTồnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tạoPhiếuNhậpĐiềuChỉnhToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýPhiếuXuấtBánToolStripMenuItem;
     }
 }
 

@@ -136,7 +136,10 @@ namespace HTTTKeToan.view
                 item.dvt = (string)row.Cells[2].Value;
                 item.soLuong = Convert.ToInt32(row.Cells[3].Value);
                 item.donGia = float.Parse(row.Cells[4].Value.ToString(), CultureInfo.InvariantCulture.NumberFormat);
-                item.thueXuat = float.Parse(row.Cells[5].Value.ToString(), CultureInfo.InvariantCulture.NumberFormat);
+                var thueXuat = float.Parse(row.Cells[5].Value.ToString(), CultureInfo.InvariantCulture.NumberFormat);
+                thueXuat = thueXuat * 0.1f;
+                item.thueXuat = thueXuat;
+
                 item.tienThue = float.Parse(row.Cells[6].Value.ToString(), CultureInfo.InvariantCulture.NumberFormat);
                 listItem.Add(item);
                 ++index;
