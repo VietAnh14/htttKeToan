@@ -30,7 +30,12 @@
         {
             this.title = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnLapTheKhoHangHoa = new System.Windows.Forms.Button();
+            this.Thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MSCH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHangHoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLTonCuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbKho = new System.Windows.Forms.ComboBox();
@@ -39,12 +44,6 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnTinhHoachToanGiaVon = new System.Windows.Forms.Button();
             this.monthPicker = new System.Windows.Forms.DateTimePicker();
-            this.Thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MSCH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenHangHoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SLNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SLXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SLTonCuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,14 +78,46 @@
             this.dataGridView1.Size = new System.Drawing.Size(957, 370);
             this.dataGridView1.TabIndex = 1;
             // 
-            // btnLapTheKhoHangHoa
+            // Thang
             // 
-            this.btnLapTheKhoHangHoa.Location = new System.Drawing.Point(658, 465);
-            this.btnLapTheKhoHangHoa.Name = "btnLapTheKhoHangHoa";
-            this.btnLapTheKhoHangHoa.Size = new System.Drawing.Size(154, 34);
-            this.btnLapTheKhoHangHoa.TabIndex = 2;
-            this.btnLapTheKhoHangHoa.Text = "Lập thẻ kho hàng hóa";
-            this.btnLapTheKhoHangHoa.UseVisualStyleBackColor = true;
+            this.Thang.HeaderText = "Tháng";
+            this.Thang.Name = "Thang";
+            this.Thang.ReadOnly = true;
+            // 
+            // MSCH
+            // 
+            this.MSCH.HeaderText = "Mã số cửa hàng";
+            this.MSCH.Name = "MSCH";
+            this.MSCH.ReadOnly = true;
+            this.MSCH.Width = 150;
+            // 
+            // TenHangHoa
+            // 
+            this.TenHangHoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenHangHoa.HeaderText = "Tên hàng";
+            this.TenHangHoa.Name = "TenHangHoa";
+            this.TenHangHoa.ReadOnly = true;
+            // 
+            // SLNhap
+            // 
+            this.SLNhap.HeaderText = "Số lượng nhập";
+            this.SLNhap.Name = "SLNhap";
+            this.SLNhap.ReadOnly = true;
+            this.SLNhap.Width = 120;
+            // 
+            // SLXuat
+            // 
+            this.SLXuat.HeaderText = "Số lượng xuất";
+            this.SLXuat.Name = "SLXuat";
+            this.SLXuat.ReadOnly = true;
+            this.SLXuat.Width = 120;
+            // 
+            // SLTonCuoi
+            // 
+            this.SLTonCuoi.HeaderText = "Số lượng tồn cuối kỳ";
+            this.SLTonCuoi.Name = "SLTonCuoi";
+            this.SLTonCuoi.ReadOnly = true;
+            this.SLTonCuoi.Width = 150;
             // 
             // label1
             // 
@@ -172,47 +203,6 @@
             this.monthPicker.Size = new System.Drawing.Size(110, 20);
             this.monthPicker.TabIndex = 5;
             // 
-            // Thang
-            // 
-            this.Thang.HeaderText = "Tháng";
-            this.Thang.Name = "Thang";
-            this.Thang.ReadOnly = true;
-            // 
-            // MSCH
-            // 
-            this.MSCH.HeaderText = "Mã số cửa hàng";
-            this.MSCH.Name = "MSCH";
-            this.MSCH.ReadOnly = true;
-            this.MSCH.Width = 150;
-            // 
-            // TenHangHoa
-            // 
-            this.TenHangHoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenHangHoa.HeaderText = "Tên hàng";
-            this.TenHangHoa.Name = "TenHangHoa";
-            this.TenHangHoa.ReadOnly = true;
-            // 
-            // SLNhap
-            // 
-            this.SLNhap.HeaderText = "Số lượng nhập";
-            this.SLNhap.Name = "SLNhap";
-            this.SLNhap.ReadOnly = true;
-            this.SLNhap.Width = 120;
-            // 
-            // SLXuat
-            // 
-            this.SLXuat.HeaderText = "Số lượng xuất";
-            this.SLXuat.Name = "SLXuat";
-            this.SLXuat.ReadOnly = true;
-            this.SLXuat.Width = 120;
-            // 
-            // SLTonCuoi
-            // 
-            this.SLTonCuoi.HeaderText = "Số lượng tồn cuối kỳ";
-            this.SLTonCuoi.Name = "SLTonCuoi";
-            this.SLTonCuoi.ReadOnly = true;
-            this.SLTonCuoi.Width = 150;
-            // 
             // FormBaoCaoNhapTon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,7 +216,6 @@
             this.Controls.Add(this.cbKho);
             this.Controls.Add(this.btnTinhHoachToanGiaVon);
             this.Controls.Add(this.btnTimKiem);
-            this.Controls.Add(this.btnLapTheKhoHangHoa);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.title);
             this.Name = "FormBaoCaoNhapTon";
@@ -242,7 +231,6 @@
 
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnLapTheKhoHangHoa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbKho;

@@ -62,5 +62,10 @@ namespace HTTTKeToan
         {
             loadFormInPanel(Form1.getInstance());
         }
+
+        private void menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            loadFormInPanel(Form3.newInstance());
+        }
     }
 }

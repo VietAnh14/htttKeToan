@@ -34,6 +34,7 @@
             this.tạoPhiếuNhậpĐiềuChỉnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýPhiếuXuấtBánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýPhiếuNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,12 +53,14 @@
             this.báoCáoNhậpXuấtTồnToolStripMenuItem,
             this.tạoPhiếuNhậpĐiềuChỉnhToolStripMenuItem,
             this.tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem,
-            this.quảnLýPhiếuXuấtBánToolStripMenuItem});
+            this.quảnLýPhiếuXuấtBánToolStripMenuItem,
+            this.quảnLýPhiếuNhậpToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(984, 24);
             this.menu.TabIndex = 1;
             this.menu.Text = "menuStrip1";
+            this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
             // 
             // báoCáoNhậpXuấtTồnToolStripMenuItem
             // 
@@ -87,6 +90,12 @@
             this.quảnLýPhiếuXuấtBánToolStripMenuItem.Text = "Quản lý phiếu xuất bán";
             this.quảnLýPhiếuXuấtBánToolStripMenuItem.Click += new System.EventHandler(this.quảnLýPhiếuXuấtBánToolStripMenuItem_Click);
             // 
+            // quảnLýPhiếuNhậpToolStripMenuItem
+            // 
+            this.quảnLýPhiếuNhậpToolStripMenuItem.Name = "quảnLýPhiếuNhậpToolStripMenuItem";
+            this.quảnLýPhiếuNhậpToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
+            this.quảnLýPhiếuNhậpToolStripMenuItem.Text = "Quản lý phiếu nhập";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +122,7 @@
         private System.Windows.Forms.ToolStripMenuItem tạoPhiếuNhậpĐiềuChỉnhToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tạoPhiếuXuấtĐiềuChỉnhToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýPhiếuXuấtBánToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýPhiếuNhậpToolStripMenuItem;
     }
 }
 
