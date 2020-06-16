@@ -39,7 +39,7 @@ namespace HTTTKeToan.view
 
         private void loadData()
         {
-            const string sql = "SELECT * FROM GOC_PHIEU";
+            const string sql = "SELECT * FROM GOC_PHIEU WHERE LOAICT = 'XBHH'";
             var data = DbUtils.Instance.ExecuteQuery(sql);
             dataGridViewPSO.AutoGenerateColumns = false;
             dataGridViewPSO.Columns[0].DataPropertyName = "PSO";
