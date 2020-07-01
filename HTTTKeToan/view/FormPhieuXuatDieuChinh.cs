@@ -79,10 +79,10 @@ namespace HTTTKeToan.view
             public String getInsertQuery()
             {
                 string query = "insert into HANG_HOA values('"+pso.ToString()+"',";
-                query += maHH.ToString() + ",'";
+                query += maHH.ToString() + ", N'";
                 query += dvt.ToString() + "',";
-                query += donGia.ToString() + ",";
                 query += soLuong.ToString() + ",";
+                query += donGia.ToString() + ",";
                 query += thueXuat.ToString() + ",";
                 query += tienThue.ToString() + ")";
                 Console.WriteLine(query);

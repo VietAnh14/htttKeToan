@@ -50,6 +50,7 @@
             this.TX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnFind = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPSO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 23);
+            this.label1.Location = new System.Drawing.Point(52, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 17);
             this.label1.TabIndex = 0;
@@ -74,7 +75,7 @@
             "KHO04",
             "KHO05",
             "KHO06"});
-            this.cbMaCuaHang.Location = new System.Drawing.Point(126, 19);
+            this.cbMaCuaHang.Location = new System.Drawing.Point(127, 39);
             this.cbMaCuaHang.Name = "cbMaCuaHang";
             this.cbMaCuaHang.Size = new System.Drawing.Size(121, 21);
             this.cbMaCuaHang.TabIndex = 1;
@@ -83,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(298, 23);
+            this.label2.Location = new System.Drawing.Point(299, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 17);
             this.label2.TabIndex = 0;
@@ -98,7 +99,7 @@
             "KH03",
             "KH04",
             "KH05"});
-            this.cbKhachHang.Location = new System.Drawing.Point(382, 19);
+            this.cbKhachHang.Location = new System.Drawing.Point(383, 39);
             this.cbKhachHang.Name = "cbKhachHang";
             this.cbKhachHang.Size = new System.Drawing.Size(121, 21);
             this.cbKhachHang.TabIndex = 1;
@@ -107,7 +108,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(591, 20);
+            this.label3.Location = new System.Drawing.Point(592, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 17);
             this.label3.TabIndex = 0;
@@ -116,7 +117,7 @@
             // pickerNgLap
             // 
             this.pickerNgLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.pickerNgLap.Location = new System.Drawing.Point(661, 20);
+            this.pickerNgLap.Location = new System.Drawing.Point(662, 40);
             this.pickerNgLap.Name = "pickerNgLap";
             this.pickerNgLap.Size = new System.Drawing.Size(89, 20);
             this.pickerNgLap.TabIndex = 2;
@@ -134,7 +135,7 @@
             this.SHD,
             this.NPHHD,
             this.NgTT});
-            this.dataGridViewPSO.Location = new System.Drawing.Point(7, 76);
+            this.dataGridViewPSO.Location = new System.Drawing.Point(8, 96);
             this.dataGridViewPSO.Name = "dataGridViewPSO";
             this.dataGridViewPSO.Size = new System.Drawing.Size(965, 181);
             this.dataGridViewPSO.TabIndex = 3;
@@ -195,7 +196,7 @@
             this.DG,
             this.TX,
             this.GV});
-            this.dataGridView1.Location = new System.Drawing.Point(7, 281);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 301);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(965, 205);
             this.dataGridView1.TabIndex = 4;
@@ -243,7 +244,7 @@
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(801, 17);
+            this.btnFind.Location = new System.Drawing.Point(802, 37);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(77, 38);
             this.btnFind.TabIndex = 5;
@@ -251,11 +252,22 @@
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(388, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(235, 25);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Quản lý phiếu xuất bán";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 511);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dataGridViewPSO);
@@ -299,5 +311,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TX;
         private System.Windows.Forms.DataGridViewTextBoxColumn GV;
         private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.Label label5;
     }
 }

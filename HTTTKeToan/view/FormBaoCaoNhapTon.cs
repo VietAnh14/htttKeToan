@@ -121,12 +121,24 @@ namespace HTTTKeToan.view
             DataTable dt = dataGridView1.DataSource as DataTable;
             try
             {
-                foreach (DataRow row in dt.Rows)
+                HangHoa hangHoa = (HangHoa)cbHangHoa.SelectedItem;
+                if (hangHoa.maHH != -1 || cbKho.SelectedItem.ToString() != cbKho.Items[0].ToString())
                 {
-                    object[] parameter = { row["THANG"], row["MSCH"], row["MAHH"] };
+                    string thang = monthPicker.Value.ToString("yyyy-MM-dd");
+                    string msch = cbKho.SelectedItem.ToString();
+                    string maHH = ((HangHoa)cbHangHoa.SelectedItem).maHH.ToString();
+                    object[] parameter = { thang, msch, maHH };
                     var result = DbUtils.Instance.ExecuteNonQuery("HACHTOANGIAVON @THANG @MSCH @MAHH", parameter);
+                    MessageBox.Show(this, "Hoạch toán giá vốn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                } else
+                {
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        object[] parameter = { row["THANG"], row["MSCH"], row["MAHH"] };
+                        var result = DbUtils.Instance.ExecuteNonQuery("HACHTOANGIAVON @THANG @MSCH @MAHH", parameter);
+                    }
+                    MessageBox.Show(this, "Hoạch toán giá vốn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                MessageBox.Show(this, "Hoạch toán giá vốn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             } catch(Exception error)
             {
                 MessageBox.Show(this, error.StackTrace, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
